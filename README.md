@@ -9,3 +9,8 @@ I'm still working on this, but it's basically a recreation of the environment pr
 - populates with some dummy content
 - parses MDM theme variables (e.g. `$enter_your_username_label`)
 - catches `alert()` calls in theme and handles them
+
+
+### Usage
+- Include `dummy.js` in your theme before your theme javascript
+- Develop your theme in your browser, as you would any other website
