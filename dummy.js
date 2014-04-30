@@ -1,6 +1,7 @@
 var mdm = mdm || {};
 
 (function (mdm, $) {
+    window.debugging_login = true;
 
     var add_dummy_data = function () {
         /*
@@ -153,14 +154,6 @@ var mdm = mdm || {};
         mdm_set_current_language("English (USA)", "en_US.UTF-8");
         mdm_prompt("Username: ");
     };
-    var disable_context_menu = function () {
-        $(document).on('contextmenu', function (event) {
-            if (event.button === 2) {
-                return false;
-            }
-        });
-    };
-
     window.setStatus = function (message) {
         console.log(message);
     };
@@ -171,7 +164,7 @@ var mdm = mdm || {};
         } else {
             setStatus('Clicked cancel');
         }
-    }
+    };
     window.set_welcome_message = window.set_welcome_message || function (message) {
         console.log(message);
     };
@@ -195,7 +188,7 @@ var mdm = mdm || {};
                 } else {
                     this.userName = param;
                     setStatus('Entered user: ' + param);
-                    mdm_noecho('Username:');
+                    mdm_noecho('Password:');
                 }
             }
             else if (action === 'LANGUAGE') {
